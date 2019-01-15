@@ -4,7 +4,9 @@ class GuessesController < ApplicationController
 
     def create
         @guess = Guess.create(guess_params)
+        session[:guess] = @guess.answer
         redirect_to guess_path(@guess)
+
     end
 
     def new
@@ -13,6 +15,11 @@ class GuessesController < ApplicationController
     
 
     def show
+        if session[:guess] == "Boy"
+            @answer = "Correct"
+        else
+            @answer = "You're wrong"
+        end
     end
     
 
