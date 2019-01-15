@@ -2,6 +2,7 @@ class GuessesController < ApplicationController
     def index
     end
 
-    def 
+    def show
+    end
 
 end
