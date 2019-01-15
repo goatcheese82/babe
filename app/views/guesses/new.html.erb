@@ -1,0 +1,9 @@
+<%= form_for(@guess) do |g| %>
+<%= g.label :name %>
+<%= g.text_field :name %>
+<%= g.label :girl %>
+<%= g.radio_button :answer, 'Girl' %>
+<%= g.label :boy %>
+<%= g.radio_button :answer, 'Boy' %>
+<%= g.submit %>
+<% end %>
